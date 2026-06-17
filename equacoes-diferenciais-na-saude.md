@@ -1,7 +1,7 @@
 ---
 id: equacoes-diferenciais-na-saude
 title: "Equações Diferenciais na Saúde"
-language: Julia
+lang: pt
 order: 1
 ---
 Lorem Ipsum

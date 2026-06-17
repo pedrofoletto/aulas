@@ -1,7 +1,7 @@
 ---
 id: python-machine-learning
 title: "Conceitos de Aprendizado de Máquina"
-language: Python
+lang: pt
 subfolder: "Machine Learning"
 order: 1
 summary: "Linguagem usada na área principalmente para Machine Learning"
