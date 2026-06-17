@@ -1,0 +1,11 @@
+---
+title: "Aulas & Anotações de Engenharia"
+---
+
+Bem-vindo à minha biblioteca de notas de estudo e simulações científicas voltada para Engenharia de Controle e Automação aplicada à saúde.
+
+Aqui eu compilo guias práticos, equações matemáticas e algoritmos em Python, Julia, MATLAB e C.
+
+### Módulos Disponíveis:
+* **[Machine Learning (ECG)](python-machine-learning.md)**: Classificação inteligente de sinais de eletrocardiograma (ECG) usando Random Forest e Redes Neurais Convolucionais.
+* **[Equações Diferenciais na Saúde](equacoes-diferenciais-na-saude.md)**: Modelagem matemática e simulação computacional de sistemas biológicos.

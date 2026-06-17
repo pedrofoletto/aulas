@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Pedro // Aulas"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Início
+      - href: python-machine-learning.md
+        text: "Machine Learning (ECG)"
+      - href: equacoes-diferenciais-na-saude.md
+        text: "Equações Diferenciais na Saúde"
+
+format:
+  html:
+    theme: [dark, custom-theme.scss]
+    css: styles.css
+    toc: true
+    code-fold: true
