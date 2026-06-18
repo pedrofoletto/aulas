@@ -46,9 +46,19 @@ a:hover {
 .navbar-brand {
   font-family: 'Courier New', Courier, monospace !important;
   font-weight: 700 !important;
-  font-size: 0.95rem !important;
+  font-size: 0.85rem !important;
   color: var(--foreground) !important;
   letter-spacing: 0.05em;
+  padding: 6px 12px !important;
+  margin-right: 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: all 0.15s ease !important;
+}
+
+.navbar-brand:hover {
+  background-color: var(--muted) !important;
+  color: var(--foreground) !important;
 }
 
 .nav-link {
@@ -58,6 +68,8 @@ a:hover {
   padding: 6px 12px !important;
   border-radius: 0px !important; /* Sem cantos arredondados, estilo Old School */
   transition: all 0.15s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -65,18 +77,26 @@ a:hover {
   background-color: var(--muted) !important;
 }
 
-/* Toggler de Tema do Quarto */
+/* Alternador de Tema do Quarto (Igual ao do Portfólio) */
 .quarto-color-scheme-toggle {
-  color: var(--foreground) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 0px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 30px !important;
+  height: 30px !important;
+  padding: 0 !important;
   background: none !important;
-  padding: 4px 8px !important;
+  border: 1px solid var(--border) !important;
+  color: var(--foreground) !important;
+  border-radius: 0px !important;
   transition: all 0.15s ease !important;
+  margin-left: 10px !important;
+  cursor: pointer !important;
 }
 
 .quarto-color-scheme-toggle:hover {
   background-color: var(--muted) !important;
+  color: var(--foreground) !important;
 }
 
 /* ==========================================================================

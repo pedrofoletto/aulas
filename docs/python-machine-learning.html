@@ -74,6 +74,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
+<script src="https://unpkg.com/@phosphor-icons/web" defer=""></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -260,15 +261,15 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Início</span></a>
+<span class="menu-text">[Início]</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./python-machine-learning.html" aria-current="page"> 
-<span class="menu-text">Machine Learning (ECG)</span></a>
+<span class="menu-text">[Machine Learning (ECG)]</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./equacoes-diferenciais-na-saude.html"> 
-<span class="menu-text">Equações Diferenciais na Saúde</span></a>
+<span class="menu-text">[Equações Diferenciais]</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -817,9 +818,35 @@ ul.task-list li input[type="checkbox"] {
 </div> <!-- /content -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+  // Ajustar link do Voltar ao site
   const brand = document.querySelector(".navbar-brand");
   if (brand) {
     brand.href = "../";
+  }
+  
+  // Customizar alternador de tema com ícones de Sol e Lua do Phosphor
+  const toggle = document.querySelector(".quarto-color-scheme-toggle");
+  if (toggle) {
+    const icon = document.createElement("i");
+    icon.style.fontSize = "1rem";
+    toggle.innerHTML = "";
+    toggle.appendChild(icon);
+    
+    function updateToggleIcon() {
+      const isDark = document.body.classList.contains("quarto-color-scheme-dark") || 
+                     document.documentElement.getAttribute("data-theme") === "dark" ||
+                     localStorage.getItem("quarto-color-scheme") === "dark";
+      if (isDark) {
+        icon.className = "ph ph-sun";
+      } else {
+        icon.className = "ph ph-moon";
+      }
+    }
+    
+    updateToggleIcon();
+    toggle.addEventListener("click", function() {
+      setTimeout(updateToggleIcon, 50);
+    });
   }
 });
 </script>

@@ -7,11 +7,11 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Início
+        text: "[Início]"
       - href: python-machine-learning.md
-        text: "Machine Learning (ECG)"
+        text: "[Machine Learning (ECG)]"
       - href: equacoes-diferenciais-na-saude.md
-        text: "Equações Diferenciais na Saúde"
+        text: "[Equações Diferenciais]"
 
 format:
   html:
@@ -21,13 +21,41 @@ format:
     css: styles.css
     toc: true
     code-fold: true
+    header-includes: |
+      <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     include-after-body:
       - text: |
           <script>
           document.addEventListener("DOMContentLoaded", function() {
+            // Ajustar link do Voltar ao site
             const brand = document.querySelector(".navbar-brand");
             if (brand) {
               brand.href = "../";
+            }
+            
+            // Customizar alternador de tema com ícones de Sol e Lua do Phosphor
+            const toggle = document.querySelector(".quarto-color-scheme-toggle");
+            if (toggle) {
+              const icon = document.createElement("i");
+              icon.style.fontSize = "1rem";
+              toggle.innerHTML = "";
+              toggle.appendChild(icon);
+              
+              function updateToggleIcon() {
+                const isDark = document.body.classList.contains("quarto-color-scheme-dark") || 
+                               document.documentElement.getAttribute("data-theme") === "dark" ||
+                               localStorage.getItem("quarto-color-scheme") === "dark";
+                if (isDark) {
+                  icon.className = "ph ph-sun";
+                } else {
+                  icon.className = "ph ph-moon";
+                }
+              }
+              
+              updateToggleIcon();
+              toggle.addEventListener("click", function() {
+                setTimeout(updateToggleIcon, 50);
+              });
             }
           });
           </script>
