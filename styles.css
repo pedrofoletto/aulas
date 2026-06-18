@@ -1,1 +1,193 @@
-/* Adicione regras de CSS personalizadas aqui se necessário */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+/* ==========================================================================
+   RESET & TIPOGRAFIA BASE (ALINHADO COM O PORTFÓLIO)
+   ========================================================================== */
+body {
+  font-family: 'Outfit', sans-serif !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  line-height: 1.6;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif !important;
+  color: var(--foreground) !important;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Links sem sublinhado padrão, acendendo com a cor primária */
+a {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+a:hover {
+  color: var(--primary) !important;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   NAVBAR (TOPO - ALINHADO COM O PORTFÓLIO)
+   ========================================================================== */
+.navbar {
+  background: color-mix(in srgb, var(--background) 80%, transparent) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 10px 0 !important;
+}
+
+.navbar-brand {
+  font-family: 'Courier New', Courier, monospace !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: var(--foreground) !important;
+  letter-spacing: 0.05em;
+}
+
+.nav-link {
+  font-family: 'Courier New', Courier, monospace !important;
+  font-size: 0.85rem !important;
+  color: var(--muted-foreground) !important;
+  padding: 6px 12px !important;
+  border-radius: 0px !important; /* Sem cantos arredondados, estilo Old School */
+  transition: all 0.15s ease !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--foreground) !important;
+  background-color: var(--muted) !important;
+}
+
+/* Toggler de Tema do Quarto */
+.quarto-color-scheme-toggle {
+  color: var(--foreground) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0px !important;
+  background: none !important;
+  padding: 4px 8px !important;
+  transition: all 0.15s ease !important;
+}
+
+.quarto-color-scheme-toggle:hover {
+  background-color: var(--muted) !important;
+}
+
+/* ==========================================================================
+   SIDEBAR & TABELA DE CONTEÚDO (TOC)
+   ========================================================================== */
+#quarto-sidebar, .quarto-sidebar, .sidebar {
+  background-color: var(--background) !important;
+  border-right: 1px dashed var(--border) !important;
+}
+
+.sidebar-item-text, .sidebar-link {
+  font-family: 'Outfit', sans-serif !important;
+  color: var(--muted-foreground) !important;
+  transition: all 0.15s ease !important;
+}
+
+.sidebar-link.active, .sidebar-link:hover {
+  color: var(--foreground) !important;
+  background-color: var(--muted) !important;
+}
+
+/* TOC (Índice da direita) */
+#TOC, .toc-actions {
+  font-family: 'Outfit', sans-serif !important;
+  color: var(--muted-foreground) !important;
+  border-left: 1px dashed var(--border) !important;
+}
+
+#TOC a {
+  color: var(--muted-foreground) !important;
+}
+
+#TOC a:hover, #TOC a.active {
+  color: var(--foreground) !important;
+}
+
+/* ==========================================================================
+   ELEMENTOS DE CÓDIGO (ESTILO DATASHEET / LABORATÓRIO)
+   ========================================================================== */
+code, pre, .mono-text {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+pre {
+  background-color: var(--muted) !important;
+  border: 1px dashed var(--border) !important;
+  color: var(--foreground) !important;
+  border-radius: 0px !important; /* Estilo old school do portfólio (radius 0px) */
+  padding: 16px !important;
+}
+
+/* Destacar código inline */
+code:not(pre code) {
+  background-color: var(--muted) !important;
+  color: var(--primary) !important;
+  padding: 2px 6px !important;
+  border-radius: 0px !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* ==========================================================================
+   CUSTOMIZAÇÃO DA LUPA E INPUT DE BUSCA (QUARTO)
+   ========================================================================== */
+.quarto-search-toggle, 
+.quarto-search-button, 
+#quarto-search, 
+.quarto-search-toggle i, 
+.quarto-search-toggle svg, 
+.quarto-search-toggle .bi-search,
+.quarto-search-toggle .bi,
+.aa-SubmitIcon,
+.aa-SearchStethoscopeIcon,
+.search-icon {
+  color: var(--foreground) !important;
+  fill: var(--foreground) !important;
+  border-color: transparent !important;
+  transition: all 0.15s ease !important;
+}
+
+.quarto-search-toggle:hover, 
+.quarto-search-button:hover,
+#quarto-search:hover,
+.quarto-search-toggle:hover i, 
+.quarto-search-toggle:hover svg,
+.quarto-search-toggle:hover .bi-search,
+.quarto-search-toggle:hover .bi {
+  color: var(--primary) !important;
+  fill: var(--primary) !important;
+  background-color: var(--muted) !important;
+}
+
+.search-input, 
+#quarto-search-input, 
+.aa-Input, 
+.aa-Form {
+  background-color: var(--muted) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--foreground) !important;
+  border-radius: 0px !important;
+}
+
+.search-input:focus, 
+#quarto-search-input:focus,
+.aa-Input:focus {
+  outline: 1px solid var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.aa-Panel, .aa-Dropdown, .search-results {
+  background-color: var(--background) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--foreground) !important;
+  border-radius: 0px !important;
+}
