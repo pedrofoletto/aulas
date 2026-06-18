@@ -1,0 +1,28 @@
+/*-- scss:defaults --*/
+$theme: "light";
+
+// Cores do Portfólio do Pedro (Tema Claro)
+$primary: #006239; // Verde Floresta
+$body-bg: #f7f4eb; // Bege / Caderno de Laboratório
+$body-color: #171717;
+$link-color: #006239;
+$link-hover-color: lighten(#006239, 10%);
+$border-color: #dcd7ca;
+
+// Fontes do Portfólio
+$font-family-sans-serif: "Outfit", sans-serif;
+$font-family-monospace: "Courier New", Courier, monospace;
+
+// Customizações de Code Blocks
+$code-block-bg: #ebe7db;
+$code-block-border-color: #dcd7ca;
+
+/*-- scss:rules --*/
+:root {
+  --background: #f7f4eb;
+  --foreground: #171717;
+  --primary: #006239;
+  --border: #dcd7ca;
+  --muted: #ebe7db;
+  --muted-foreground: #202020;
+}

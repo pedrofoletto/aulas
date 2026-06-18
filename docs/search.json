@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aulas & Anotações de Engenharia",
+    "section": "",
+    "text": "Bem-vindo à minha biblioteca de notas de estudo e simulações científicas voltada para Engenharia de Controle e Automação aplicada à saúde.\nAqui eu compilo guias práticos, equações matemáticas e algoritmos em Python, Julia, MATLAB e C.\n\nMódulos Disponíveis:\n\nMachine Learning (ECG): Classificação inteligente de sinais de eletrocardiograma (ECG) usando Random Forest e Redes Neurais Convolucionais.\nEquações Diferenciais na Saúde: Modelagem matemática e simulação computacional de sistemas biológicos."
+  },
+  {
+    "objectID": "python-machine-learning.html",
+    "href": "python-machine-learning.html",
+    "title": "Conceitos de Aprendizado de Máquina",
+    "section": "",
+    "text": "Para construir um bom modelo de Machine Learning, o algoritmo precisa de dados de qualidade. Nesta seção, vamos explorar os principais problemas que enfrentamos na preparação desses dados e como eles afetam o resultado final.\n\n\n\nPara uma criança aprender o que é um cachorro, bastam alguns exemplos. Para uma máquina, precisamos de milhares ou milhões de registros.\n\nO problema: Se o volume de dados for muito pequeno, o algoritmo não conseguirá encontrar padrões estatísticos confiáveis.\nExemplo: Tentar ensinar um robô a reconhecer uma fruta mostrando apenas uma única foto de uma maçã verde. Se ele vir uma maçã vermelha na vida real, ele não vai reconhecer.\n\n\n\n\n\nPara que um modelo generalize bem, os dados de treinamento devem ser representativos dos novos casos que ele irá encontrar no mundo real. Se a sua amostra for tendenciosa, a previsão também será.\n\n\nA revista Literary Digest realizou uma das maiores pesquisas de opinião da época para a eleição presidencial entre Alf Landon e Franklin D. Roosevelt. Eles enviaram 10 milhões de questionários por correio e obtiveram 2,4 milhões de respostas.\n\nA Previsão: Landon venceria com folga (57% dos votos).\nO Resultado Real: Roosevelt esmagou a votação com 62% dos votos.\n\nOnde esteve o erro? 1. Viés de Seleção: As listas de endereços foram retiradas de catálogos telefônicos e registros de clubes de automóveis. Em 1936 (auge da Grande Depressão), quem tinha carro e telefone fixo era a parcela mais rica da população, que tendia a votar nos Republicanos. 2. Viés de Não-Resposta: Menos de 25% das pessoas responderam. Pessoas politicamente mais motivadas ou insatisfeitas tendem a responder mais, distorcendo o resultado real da população.\n\n\n\n\n\nSe você alimentar o algoritmo com lixo, ele vai prever lixo. Erros, valores ausentes (NaNs) e outliers (valores discrepantes) barulhentos destroem o aprendizado do modelo.\n\nA Solução: Limpe os dados!\nEstratégias comuns:\n\nRemover ou preencher valores faltantes usando a média, mediana ou moda.\nIdentificar e tratar discrepâncias gritantes (ex: uma idade preenchida como 200 anos).\nRemover registros duplicados.\n\n\n\n\n\n\nNem todo dado que você tem em mãos é útil para resolver o seu problema. O excesso de informações inúteis faz o modelo se perder em “padrões fantasmas” que não existem na realidade.\n\nExemplo: Se estamos prevendo o preço de uma casa, o tamanho do terreno e o número de quartos importam; a cor do carro do proprietário atual não tem nenhuma influência.\nO Processo: Chamamos isso de Seleção de Características (Feature Selection) ou Extração de Características (Feature Extraction). É o ato de selecionar apenas as variáveis que realmente têm poder explicativo sobre o nosso alvo. #Sobreajuste (Overfitting) vs. Subajuste (Underfitting)\n\nO maior desafio ao treinar um modelo é garantir que ele funcione bem com dados que ele nunca viu antes (capacidade de generalização).\n\n\n\n\nOcorre quando o modelo se ajusta exageradamente aos dados de treinamento. Ele aprende não apenas a lógica do problema, mas também todo o ruído, os erros e as particularidades daquela amostra específica.\n\nSinal de alerta: O algoritmo tem uma acertividade (precisão) absurdamente alta nos dados de treino, mas não é funcional quando recebe dados novos de teste.\n\n\n\n\n\nÉ o oposto do sobreajuste. Ocorre quando o modelo é simples demais para aprender a estrutura subjacente e os padrões dos dados.\n\nExemplo: Tentar traçar uma linha reta (modelo linear) para prever um comportamento de dados que é nitidamente curvo ou complexo. Ele vai errar na base de treino e vai continuar errando na base de teste.\nComo resolver: * Escolher um modelo mais poderoso/complexo (ex: trocar uma regressão linear por uma árvore de decisão, veremos isso mais tarde!).\n\nFornecer melhores características (features) para o algoritmo.\nReduzir as restrições de regularização do modelo."
+  },
+  {
+    "objectID": "python-machine-learning.html#quantidade-insuficiente-de-dados-de-treinamento",
+    "href": "python-machine-learning.html#quantidade-insuficiente-de-dados-de-treinamento",
+    "title": "Conceitos de Aprendizado de Máquina",
+    "section": "",
+    "text": "Para uma criança aprender o que é um cachorro, bastam alguns exemplos. Para uma máquina, precisamos de milhares ou milhões de registros.\n\nO problema: Se o volume de dados for muito pequeno, o algoritmo não conseguirá encontrar padrões estatísticos confiáveis.\nExemplo: Tentar ensinar um robô a reconhecer uma fruta mostrando apenas uma única foto de uma maçã verde. Se ele vir uma maçã vermelha na vida real, ele não vai reconhecer."
+  },
+  {
+    "objectID": "python-machine-learning.html#dados-de-treinamento-não-representativos-viés-de-amostragem",
+    "href": "python-machine-learning.html#dados-de-treinamento-não-representativos-viés-de-amostragem",
+    "title": "Conceitos de Aprendizado de Máquina",
+    "section": "",
+    "text": "Para que um modelo generalize bem, os dados de treinamento devem ser representativos dos novos casos que ele irá encontrar no mundo real. Se a sua amostra for tendenciosa, a previsão também será.\n\n\nA revista Literary Digest realizou uma das maiores pesquisas de opinião da época para a eleição presidencial entre Alf Landon e Franklin D. Roosevelt. Eles enviaram 10 milhões de questionários por correio e obtiveram 2,4 milhões de respostas.\n\nA Previsão: Landon venceria com folga (57% dos votos).\nO Resultado Real: Roosevelt esmagou a votação com 62% dos votos.\n\nOnde esteve o erro? 1. Viés de Seleção: As listas de endereços foram retiradas de catálogos telefônicos e registros de clubes de automóveis. Em 1936 (auge da Grande Depressão), quem tinha carro e telefone fixo era a parcela mais rica da população, que tendia a votar nos Republicanos. 2. Viés de Não-Resposta: Menos de 25% das pessoas responderam. Pessoas politicamente mais motivadas ou insatisfeitas tendem a responder mais, distorcendo o resultado real da população."
+  },
+  {
+    "objectID": "python-machine-learning.html#dados-de-baixa-qualidade-garbage-in-garbage-out",
+    "href": "python-machine-learning.html#dados-de-baixa-qualidade-garbage-in-garbage-out",
+    "title": "Conceitos de Aprendizado de Máquina",
+    "section": "",
+    "text": "Se você alimentar o algoritmo com lixo, ele vai prever lixo. Erros, valores ausentes (NaNs) e outliers (valores discrepantes) barulhentos destroem o aprendizado do modelo.\n\nA Solução: Limpe os dados!\nEstratégias comuns:\n\nRemover ou preencher valores faltantes usando a média, mediana ou moda.\nIdentificar e tratar discrepâncias gritantes (ex: uma idade preenchida como 200 anos).\nRemover registros duplicados."
+  },
+  {
+    "objectID": "python-machine-learning.html#características-irrelevantes-engenharia-de-recursos",
+    "href": "python-machine-learning.html#características-irrelevantes-engenharia-de-recursos",
+    "title": "Conceitos de Aprendizado de Máquina",
+    "section": "",
+    "text": "Nem todo dado que você tem em mãos é útil para resolver o seu problema. O excesso de informações inúteis faz o modelo se perder em “padrões fantasmas” que não existem na realidade.\n\nExemplo: Se estamos prevendo o preço de uma casa, o tamanho do terreno e o número de quartos importam; a cor do carro do proprietário atual não tem nenhuma influência.\nO Processo: Chamamos isso de Seleção de Características (Feature Selection) ou Extração de Características (Feature Extraction). É o ato de selecionar apenas as variáveis que realmente têm poder explicativo sobre o nosso alvo. #Sobreajuste (Overfitting) vs. Subajuste (Underfitting)\n\nO maior desafio ao treinar um modelo é garantir que ele funcione bem com dados que ele nunca viu antes (capacidade de generalização)."
+  },
+  {
+    "objectID": "python-machine-learning.html#cuidado-com-o-sobreajuste-dos-dados-overfitting",
+    "href": "python-machine-learning.html#cuidado-com-o-sobreajuste-dos-dados-overfitting",
+    "title": "Conceitos de Aprendizado de Máquina",
+    "section": "",
+    "text": "Ocorre quando o modelo se ajusta exageradamente aos dados de treinamento. Ele aprende não apenas a lógica do problema, mas também todo o ruído, os erros e as particularidades daquela amostra específica.\n\nSinal de alerta: O algoritmo tem uma acertividade (precisão) absurdamente alta nos dados de treino, mas não é funcional quando recebe dados novos de teste."
+  },
+  {
+    "objectID": "python-machine-learning.html#e-com-o-subajuste-dos-dados-underfitting",
+    "href": "python-machine-learning.html#e-com-o-subajuste-dos-dados-underfitting",
+    "title": "Conceitos de Aprendizado de Máquina",
+    "section": "",
+    "text": "É o oposto do sobreajuste. Ocorre quando o modelo é simples demais para aprender a estrutura subjacente e os padrões dos dados.\n\nExemplo: Tentar traçar uma linha reta (modelo linear) para prever um comportamento de dados que é nitidamente curvo ou complexo. Ele vai errar na base de treino e vai continuar errando na base de teste.\nComo resolver: * Escolher um modelo mais poderoso/complexo (ex: trocar uma regressão linear por uma árvore de decisão, veremos isso mais tarde!).\n\nFornecer melhores características (features) para o algoritmo.\nReduzir as restrições de regularização do modelo."
+  },
+  {
+    "objectID": "equacoes-diferenciais-na-saude.html",
+    "href": "equacoes-diferenciais-na-saude.html",
+    "title": "Equações Diferenciais na Saúde",
+    "section": "",
+    "text": "Lorem Ipsum"
+  }
+]

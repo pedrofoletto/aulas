@@ -1,5 +1,6 @@
 ---
 title: "Aulas & Anotações de Engenharia"
+toc: false
 ---
 
 Bem-vindo à minha biblioteca de notas de estudo e simulações científicas voltada para Engenharia de Controle e Automação aplicada à saúde.

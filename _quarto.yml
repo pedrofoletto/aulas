@@ -3,9 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Pedro // Aulas"
+  title: "[Voltar ao site]"
   navbar:
-    background: primary
     left:
       - href: index.qmd
         text: Início
@@ -16,7 +15,19 @@ website:
 
 format:
   html:
-    theme: [dark, custom-theme.scss]
+    theme:
+      light: [default, custom-theme-light.scss]
+      dark: [dark, custom-theme-dark.scss]
     css: styles.css
     toc: true
     code-fold: true
+    include-after-body:
+      - text: |
+          <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const brand = document.querySelector(".navbar-brand");
+            if (brand) {
+              brand.href = "../";
+            }
+          });
+          </script>
